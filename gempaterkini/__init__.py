@@ -75,7 +75,6 @@ def tampilkan_data(result):
     print(f"Koordinat: {result['koordinat']}")
     print(f"Pusat: {result['pusat']}")
     return None
-    # print(f"Dirasakan: {result['dirasakan']}")
 
 #Code dibawah tidak akan dijalankan karena nama filenya bukan main
 if __name__ == "__main__":
