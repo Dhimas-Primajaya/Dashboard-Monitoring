@@ -4,24 +4,10 @@ from requests.exceptions import RequestException
 
 
 def ekstraksi_data():
-    """
-    Tanggal: 02 Nov 2025
-    Waktu: 13:47:31 WIB
-    Magnitudo: 2,9
-    Kedalaman: 17 Km
-    Lokasi: 4,02 LS-121,83 BT
-    Pusat Gempa: Berada di darat 10 km barat daya Kolaka Timur
-    Dirasakan (Skala MMI): II-III Kolaka Timur
-    :return:
-    """
-
-
     try:
         content = requests.get("https://bmkg.go.id")
     except RequestException:
         return None
-    # print(content) #Menampilkan Response Status Code dari Server
-    # print(content.text)
 
     if content.status_code == 200:
         hasil = dict()
@@ -75,10 +61,3 @@ def tampilkan_data(result):
     print(f"Koordinat: {result['koordinat']}")
     print(f"Pusat: {result['pusat']}")
     return None
-
-#Code dibawah tidak akan dijalankan karena nama filenya bukan main
-if __name__ == "__main__":
-    print("Ini adalah package gempaterkini")
-
-#Code dibawah ini akan dijalankan karena tidak didalam if __name__ == "__main__":
-# print("Ini adalah package gempaterkini")
