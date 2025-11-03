@@ -50,9 +50,9 @@ def ekstraksi_data():
             koordinat = semua_nilai_span[2].text.strip()
         else:
             # Jika list kosong (0 elemen)
-            magnitudo = None
-            kedalaman = None
-            koordinat = None
+            magnitudo = "N/A"
+            kedalaman = "N/A"
+            koordinat = "N/A"
 
         hasil["tanggal"] = tanggal
         hasil["waktu"] = waktu
