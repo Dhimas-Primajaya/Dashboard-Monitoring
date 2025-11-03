@@ -15,8 +15,6 @@ def ekstraksi_data():
     :return:
     """
 
-    # Inisialisasi variabel untuk menghindari NameError jika parsing gagal
-    global koordinat
 
     try:
         content = requests.get("https://bmkg.go.id")
@@ -60,7 +58,6 @@ def ekstraksi_data():
         hasil["kedalaman"] = kedalaman
         hasil["koordinat"] = koordinat
         hasil["pusat"] = pusat
-        # hasil["dirasakan"] = "Dirasakan (Skala MMI): II-III Kolaka Timur"
         return hasil
     else:
         return None
